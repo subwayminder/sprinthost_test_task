@@ -7,7 +7,6 @@ defineProps({
 
 const count = ref(0)
 
-import SomeShit from './SomeShit.vue'
 </script>
 
 <template>
@@ -33,8 +32,6 @@ import SomeShit from './SomeShit.vue'
         Edit
         <code>components/HelloWorld.vue</code> to test hot module replacement.
     </p>
-
-    <SomeShit hui="pizda" />
 </template>
 
 <style scoped>
