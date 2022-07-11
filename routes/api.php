@@ -24,3 +24,4 @@ Route::get('animal_types', [AnimalTypes::class, 'getAll']);
 Route::get('animal', [Animal::class, 'getAll']);
 Route::post('animal', [Animal::class, 'create']);
 Route::post('animal/make_older', [Animal::class, 'makeOlder']);
+Route::post('animal/delete', [Animal::class, 'deleteAnimalByName']);

@@ -9,6 +9,7 @@
     @vite
 </head>
 <body>
+<h1><a href="{{$link}}">Github</a></h1>
 <div id="app"></div>
 </body>
 </html>

@@ -52,6 +52,26 @@ class Animal extends Controller
         ]);
     }
 
+    public function deleteAnimalByName(Request $request)
+    {
+        $fields = $request->validate([
+            'name' => 'required|string'
+        ]);
+        $animal = AnimalModel::where('name', $fields['name'])->first();
+        if ($animal)
+        {
+            $animal->delete();
+            return response()->json([
+                'success' => true,
+                'data' => $animal->toArray()
+            ]);
+        }
+        else return response()->json([
+            'success' => false,
+            'message' => 'Animal not found',
+        ]);
+    }
+
     public function makeOlder(Request $request)
     {
         $fields = $request->validate([
